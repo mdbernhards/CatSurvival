@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7erb13gwnpcw"]
+
+[ext_resource type="Texture2D" uid="uid://bhvt5gsvodv6m" path="res://Art/Tiles/BrownTile.png" id="1_k7waw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ixdfx"]
+size = Vector2(160, 160)
+
+[node name="BrownTile" type="StaticBody2D"]
+scale = Vector2(0.7, 0.7)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_k7waw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_ixdfx")

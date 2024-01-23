@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5fgc7u6srbl6"]
+
+[ext_resource type="Script" path="res://Scenes/map.gd" id="1_tys8b"]
+[ext_resource type="Texture2D" uid="uid://dp01ccoojobnj" path="res://Art/Backgrounds/BlueBackground.png" id="2_7ngtg"]
+[ext_resource type="PackedScene" uid="uid://mxvpfjtcjuo4" path="res://Scenes/green_tile.tscn" id="3_5oi0t"]
+
+[node name="Map" type="Node2D"]
+script = ExtResource("1_tys8b")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_7ngtg")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 280.0
+offset_top = 60.0
+offset_right = -290.0
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GreenTile" parent="TextureRect/VBoxContainer" instance=ExtResource("3_5oi0t")]
+position = Vector2(85, 85)
+
+[node name="GreenTile2" parent="TextureRect/VBoxContainer" instance=ExtResource("3_5oi0t")]
+position = Vector2(416, 85)
+
+[node name="GreenTile3" parent="TextureRect/VBoxContainer" instance=ExtResource("3_5oi0t")]
+position = Vector2(255, 85)
+
+[node name="GreenTile4" parent="TextureRect/VBoxContainer" instance=ExtResource("3_5oi0t")]
+position = Vector2(583, 85)
+
+[node name="GreenTile5" parent="TextureRect/VBoxContainer" instance=ExtResource("3_5oi0t")]
+position = Vector2(750, 85)
+
+[node name="GreenTile6" parent="TextureRect/VBoxContainer" instance=ExtResource("3_5oi0t")]
+position = Vector2(917, 85)
+
+[node name="GreenTile7" parent="TextureRect/VBoxContainer" instance=ExtResource("3_5oi0t")]
+position = Vector2(1084, 85)
+
+[node name="GreenTile8" parent="TextureRect/VBoxContainer" instance=ExtResource("3_5oi0t")]
+position = Vector2(1251, 85)
+
+[node name="TileSpawnStartPosition" type="Marker2D" parent="."]
+position = Vector2(532, 78)
