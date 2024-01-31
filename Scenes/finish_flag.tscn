@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4dvppx8qgcrx"]
+
+[ext_resource type="Texture2D" uid="uid://cws0ejw8lkww0" path="res://Art/Assets/FinishFlag.png" id="1_cwxet"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_34t76"]
+radius = 145.88
+
+[node name="FinishFlag" type="StaticBody2D"]
+scale = Vector2(0.3, 0.3)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_cwxet")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-38, -25)
+shape = SubResource("CircleShape2D_34t76")

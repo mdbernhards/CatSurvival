@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://b7erb13gwnpcw"]
+[gd_scene load_steps=4 format=3 uid="uid://b7erb13gwnpcw"]
 
 [ext_resource type="Texture2D" uid="uid://bhvt5gsvodv6m" path="res://Art/Tiles/BrownTile.png" id="1_k7waw"]
+[ext_resource type="Texture2D" uid="uid://buu48d3rfnvaj" path="res://Art/Tiles/green16x16.png" id="2_uiiio"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ixdfx"]
 size = Vector2(160, 160)
@@ -14,3 +15,7 @@ texture = ExtResource("1_k7waw")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
 shape = SubResource("RectangleShape2D_ixdfx")
+
+[node name="TransparentSprite" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.278431)
+texture = ExtResource("2_uiiio")

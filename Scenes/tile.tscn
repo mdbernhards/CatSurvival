@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://bjaxl308u54d5"]
+
+[ext_resource type="Texture2D" uid="uid://dicudbid8q1ug" path="res://Art/Tiles/GreenTile.png" id="1_2gcjq"]
+[ext_resource type="Script" path="res://Scenes/tile.gd" id="1_swxsk"]
+[ext_resource type="Texture2D" uid="uid://buu48d3rfnvaj" path="res://Art/Tiles/green16x16.png" id="2_s4i03"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7np1f"]
+size = Vector2(160, 160)
+
+[node name="Tile" type="StaticBody2D"]
+scale = Vector2(0.7, 0.7)
+input_pickable = true
+script = ExtResource("1_swxsk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_2gcjq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_7np1f")
+
+[node name="TransparentSprite" type="Sprite2D" parent="."]
+visible = false
+self_modulate = Color(1, 1, 1, 0.372549)
+texture = ExtResource("2_s4i03")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

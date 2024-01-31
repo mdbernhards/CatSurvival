@@ -1,17 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://b8n30w6yoobxp"]
+[gd_scene load_steps=4 format=3 uid="uid://b8n30w6yoobxp"]
 
 [ext_resource type="Texture2D" uid="uid://bp28kbtn7aw7r" path="res://Art/Tiles/BlueTile.png" id="1_prwxx"]
+[ext_resource type="Texture2D" uid="uid://buu48d3rfnvaj" path="res://Art/Tiles/green16x16.png" id="2_8sl3y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yhktp"]
 size = Vector2(160, 160)
 
 [node name="BlueTile" type="StaticBody2D"]
+scale = Vector2(0.7, 0.7)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.7, 0.7)
 texture = ExtResource("1_prwxx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
 scale = Vector2(0.7, 0.7)
 shape = SubResource("RectangleShape2D_yhktp")
+
+[node name="TransparentSprite" type="Sprite2D" parent="."]
+visible = false
+self_modulate = Color(1, 1, 1, 0.278431)
+texture = ExtResource("2_8sl3y")

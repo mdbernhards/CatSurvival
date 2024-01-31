@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://dr2g51jh8l86i"]
+
+[ext_resource type="Script" path="res://Scenes/dog.gd" id="1_3ro4f"]
+[ext_resource type="Texture2D" uid="uid://bmmgsc7hqf6mw" path="res://Art/Assets/YellowDogLookingRight.png" id="1_ynifm"]
+[ext_resource type="Texture2D" uid="uid://bik2x0te8tnjr" path="res://Art/Assets/YellowDogAngryRight.png" id="2_hu3yv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fqcxm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_hu3yv")
+}],
+"loop": true,
+"name": &"Angry",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ynifm")
+}],
+"loop": true,
+"name": &"Normal",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_55m3o"]
+radius = 74.9533
+
+[node name="Dog" type="StaticBody2D" groups=["Enemy"]]
+scale = Vector2(0.6, 0.6)
+script = ExtResource("1_3ro4f")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_fqcxm")
+animation = &"Normal"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("CircleShape2D_55m3o")
